@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 179157218}
   - component: {fileID: 179157220}
   - component: {fileID: 179157219}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11273,7 +11273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488933658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.746789, y: 9.757755, z: 4.6446123}
+  m_LocalPosition: {x: -4.746789, y: 9.997756, z: 4.6446123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1222467696}
@@ -11404,7 +11404,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663880910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.746789, y: 9.757755, z: 4.6446123}
+  m_LocalPosition: {x: -4.746789, y: 9.997756, z: 4.6446123}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 227606687}
@@ -60720,7 +60720,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 4
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7552eef29be079440a9a9c831850bbcc, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -60784,9 +60784,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155399192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.46, y: 13.07, z: 0}
+  m_LocalPosition: {x: 7.46, y: 13.31, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1528311099}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -60804,6 +60805,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpped: 10
   jumpForce: 16
+  groundCheckRadius: 0.3
+  groundCheck: {fileID: 1528311099}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!95 &1155399198
 Animator:
   serializedVersion: 3
@@ -60947,6 +60953,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1528311098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528311099}
+  m_Layer: 0
+  m_Name: groundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1528311099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528311098}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1155399196}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2129234479
 GameObject:
   m_ObjectHideFlags: 0
