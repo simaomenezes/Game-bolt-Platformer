@@ -60815,6 +60815,8 @@ MonoBehaviour:
   variableJumpHeightMultiplier: 0.5
   wallHopForce: 10
   wallJumpForce: 20
+  jumpTimerSet: 0.15
+  turnTimerSet: 0.15
   wallHopDirection: {x: 1, y: 0.5}
   wallJumpDirection: {x: 1, y: 2}
   groundCheck: {fileID: 1528311099}
